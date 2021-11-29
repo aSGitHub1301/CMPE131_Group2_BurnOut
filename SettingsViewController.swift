@@ -1,9 +1,5 @@
-//
 //  SettingsViewController.swift
 //  BurnOut
-//
-//  Created by Rosey on 10/21/21.
-//
 
 import UIKit
 import Firebase
@@ -766,79 +762,3 @@ class SettingsViewController: UIViewController, UINavigationControllerDelegate {
         self.present(loginController, animated: true)
     }
 }
-
-/*
- 
- if MFMailComposeViewController.canSendMail(){
-     let vc = MFMailComposeViewController()
-     vc.delegate = self
-     vc.setSubject("Contact Us")
-     vc.setToRecipients(["aryan.saini@sjsu.edu"])
-     vc.setMessageBody("App has bugs!", isHTML: true)
-     present(UINavigationController(rootViewController: vc), animated: true)
- }
- else {
-     guard let url = URL(string: "https://www.gmail.com") else {
-         return
-     }
-     let vc = SFSafariViewController(url: url)
-     present(vc, animated: true)
- }
- 
- result: MFMailComposeResult, error: Error?){
-     controller.dismiss(animated: true, completion: nil)
- 
- func showMailComposer(){
-     guard MFMailComposeViewController.canSendMail() else {
-         return
-     }
-     
-     if MFMailComposeViewController.canSendMail(){
-         let composer = MFMailComposeViewController()
-         composer.mailComposeDelegate = self
-         composer.setToRecipients(["aryan.saini@sjsu.edu"])
-         composer.setSubject("Help!")
-         composer.setMessageBody("App has bugs!", isHTML: false)
-         
-         present(composer, animated: true)
-     }
-     else {
-         guard let url = URL(string: "https://www.gmail.com") else {
-             return
-         }
-         let vc = SFSafariViewController(url: url)
-         present(vc, animated: true)
-     }
- }
- 
- extension SettingsViewController: MFMailComposeViewControllerDelegate {
-     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-         if let _ = error {
-             controller.dismiss(animated: true, completion: nil)
-             return
-         }
-         switch result {
-         case .cancelled:
-             print("cancelled")
-         case .saved:
-             print("saved")
-         case .sent:
-             print("sent")
-         case .failed:
-             print("failed")
-         @unknown default:
-             print("error")
-             break
-         }
-         controller.dismiss(animated: true, completion: nil)
-     }
- }
- 
- @objc func didGetNotification(_ notification: Notification) {
-     let text = notification.object as! String?
-     currentEmail.text = text
- }
- 
- NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
- 
-*/
