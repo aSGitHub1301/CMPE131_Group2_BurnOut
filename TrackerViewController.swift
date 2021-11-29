@@ -1,9 +1,5 @@
-//
 //  TrackerViewController.swift
 //  BurnOut
-//
-//  Created by Rosey on 10/21/21.
-//
 
 import UIKit
 
@@ -112,10 +108,3 @@ extension UIViewController : UITextFieldDelegate {
         return true
     }
 }
-
-/*
- 
- 
- 
- 
- */
