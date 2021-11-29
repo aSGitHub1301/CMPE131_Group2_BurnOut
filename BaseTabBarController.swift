@@ -1,9 +1,5 @@
-//
 //  BaseTabBarController.swift
 //  BurnOut
-//
-//  Created by Rosey on 11/21/21.
-//
 
 import UIKit
 
